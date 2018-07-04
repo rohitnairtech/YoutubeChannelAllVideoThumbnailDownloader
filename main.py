@@ -21,4 +21,8 @@ else :
 
 API_KEY = input('Input your API-Key: ')
 
+#Build the GET request URL
+
+crafted_youtube_url = "https://www.googleapis.com/youtube/v3/search?key=" + API_KEY + "&channelId=" + channel + "&part=snippet,id&order=date&maxResults=" + str(SET_FETCH_LIMIT)
+
 
