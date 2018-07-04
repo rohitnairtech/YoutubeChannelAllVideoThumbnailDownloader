@@ -30,7 +30,7 @@ y_json = response.read()
 
 py_object = json.loads(y_json)
 
-for count, ob in enumerate(json_object['items']):
+for count, ob in enumerate(py_object['items']):
 	itemType = ob['id']['kind']
 	if itemType == 'youtube#video':
 		count += 1
