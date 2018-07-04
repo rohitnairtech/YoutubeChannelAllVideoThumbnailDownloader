@@ -25,4 +25,9 @@ API_KEY = input('Input your API-Key: ')
 
 crafted_youtube_url = "https://www.googleapis.com/youtube/v3/search?key=" + API_KEY + "&channelId=" + channel + "&part=snippet,id&order=date&maxResults=" + str(SET_FETCH_LIMIT)
 
+#Build URL opener and add header
 
+import urllib.request as urlOpen
+
+requester = urlOpen.build_opener()
+requester.addheaders = [('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2311.135 Safari/537.36')]
