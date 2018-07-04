@@ -65,3 +65,5 @@ for count, ob in enumerate(json_object['items']):
 	if itemType == 'youtube#video':
 		#Print title of the video
 		print(ob['snippet']['title'])
+		#Print URL of the video
+		print(ob['snippet']['thumbnails']['high']['url'])
