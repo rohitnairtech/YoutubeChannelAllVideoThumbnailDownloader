@@ -60,3 +60,5 @@ for count, ob in enumerate(json_object['items']):
 	count += 1
 	print(ob)
 	print(count)
+	#Getting the item type
+	itemType = ob['id']['kind']
