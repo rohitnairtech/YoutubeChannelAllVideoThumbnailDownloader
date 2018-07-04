@@ -31,3 +31,8 @@ import urllib.request as urlOpen
 
 requester = urlOpen.build_opener()
 requester.addheaders = [('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2311.135 Safari/537.36')]
+
+#Make the GET request
+
+response = requester.open(crafted_youtube_url)
+
