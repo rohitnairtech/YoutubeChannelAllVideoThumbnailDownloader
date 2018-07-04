@@ -16,3 +16,9 @@ if fetch_limit != "" :
     SET_FETCH_LIMIT = fetch_limit
 else :
     SET_FETCH_LIMIT = DEFAULT_FETCH_LIMIT
+
+#Get the API key, you can get it from here 'https://developers.google.com/youtube/v3/getting-started'
+
+API_KEY = input('Input your API-Key: ')
+
+
