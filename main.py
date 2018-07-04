@@ -39,3 +39,9 @@ response = requester.open(crafted_youtube_url)
 #Print the response header
 
 print (response.info())
+
+#Print response content (JSON)
+
+y_json = response.read()
+
+print(y_json)
