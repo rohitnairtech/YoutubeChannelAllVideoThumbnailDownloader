@@ -60,8 +60,8 @@ for count, ob in enumerate(json_object['items']):
 	count += 1
 	print(ob)
 	print(count)
-	#Getting the item type
+	#Getting the item type. Only Proceeding if ItemType == video
 	itemType = ob['id']['kind']
-	#Only Proceeding if ItemType == video
 	if itemType == 'youtube#video':
-		
+		#Print title of the video
+		print(ob['snippet']['title'])
