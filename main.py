@@ -45,3 +45,11 @@ print (response.info())
 y_json = response.read()
 
 print(y_json)
+
+#Convert JSON to Pythonic Object
+
+import json
+
+json_object = json.loads(y_json)
+
+print(json_object)
