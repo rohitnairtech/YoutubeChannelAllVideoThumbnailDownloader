@@ -57,15 +57,19 @@ print(py_object)
 #Iterate through newly converted py_object
 
 for count, ob in enumerate(json_object['items']):
-	count += 1
-	print(ob)
-	print(count)
 	#Getting the item type. Only Proceeding if ItemType == video
 	itemType = ob['id']['kind']
 	if itemType == 'youtube#video':
+		print(ob)
+		print(count)
+		count += 1
 		#Print title of the video
 		print(ob['snippet']['title'])
 		#Print URL of the video
 		print(ob['snippet']['thumbnails']['high']['url'])
 		#Fetching the Image resource from the internet
 		resource = urlReq.urlopen(ob['snippet']['thumbnails']['high']['url'])
+		#Creating a new file (img) in binary write mode in the newly created folder
+		output = open("./thumbnails/thumbnail"+ str(count) +".jpg","wb")
+		#Write the image resource to this file
+		output.write(resource.read())
