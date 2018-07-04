@@ -50,6 +50,13 @@ print(y_json)
 
 import json
 
-json_object = json.loads(y_json)
+py_object = json.loads(y_json)
 
-print(json_object)
+print(py_object)
+
+#Iterate through newly converted py_object
+
+for count, ob in enumerate(json_object['items']):
+	count += 1
+	print(ob)
+	print(count)
