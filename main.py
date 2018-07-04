@@ -27,9 +27,9 @@ crafted_youtube_url = "https://www.googleapis.com/youtube/v3/search?key=" + API_
 
 #Build URL opener and add header
 
-import urllib.request as urlOpen
+import urllib.request as urlReq
 
-requester = urlOpen.build_opener()
+requester = urlReq.build_opener()
 requester.addheaders = [('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2311.135 Safari/537.36')]
 
 #Make the GET request
@@ -67,3 +67,5 @@ for count, ob in enumerate(json_object['items']):
 		print(ob['snippet']['title'])
 		#Print URL of the video
 		print(ob['snippet']['thumbnails']['high']['url'])
+		#Fetching the Image resource from the internet
+		resource = urlReq.urlopen(ob['snippet']['thumbnails']['high']['url'])
