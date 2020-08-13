@@ -27,12 +27,14 @@ def getImg (uRL):
 		if itemType == 'youtube#video':
 			videoID = ob['id']['videoId']
 			count += 1
-			print(ob['snippet']['title'])
+			# title of the video
+			title = ob['snippet']['title']
+			print('Downloading highres thumbnail for - '+title)
 			try:
 				resource = urlReq.urlopen("https://i.ytimg.com/vi/"+ videoID +"/sddefault.jpg")
 			except:
 				resource = urlReq.urlopen(ob['snippet']['thumbnails']['high']['url'])
-			output = open("./thumbnails/thumbnail-"+ str(pageCount) +"-"+ str(count) +".jpg","wb")
+			output = open("./thumbnails/"+ title +"-"+ str(pageCount) +"-"+ str(count) +".jpg","wb")
 			output.write(resource.read())
 			output.close()
 
