@@ -1,8 +1,11 @@
-**This script let's one download all the thumbnails of their channel and store it as image locally in a folder.**
+# Script to download all videos, thumbnails and titles from a given youtube channel
 
-  Using this script you can download the thumbnails of any channel. Just find the Channel ID. That is, the end part of the URL of the channel. 
+## Options :-
+  ``` 1: Video download
+      2: Thumbnail download
+      3: Title list download
+  ```
 
-## Get the API key, you can get it from here 'https://developers.google.com/youtube/v3/getting-started'
-
-## Need to install youtube-dl 
-``` sudo -H pip install --upgrade youtube-dl ```
+## External dependencies- 
+### youtube-dl - for video download
+``sudo -H pip install --upgrade youtube-dl``
