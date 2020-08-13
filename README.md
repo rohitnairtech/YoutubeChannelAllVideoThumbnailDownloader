@@ -1,7 +1,8 @@
 # Script to download all videos, thumbnails and titles from a given youtube channel
 
 ## Options :-
-  ``` 1: Video download
+  ``` 
+      1: Video download
       2: Thumbnail download
       3: Title list download
   ```
