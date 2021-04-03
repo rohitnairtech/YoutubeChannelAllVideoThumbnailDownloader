@@ -4,7 +4,7 @@ import json
 from time import sleep
 # for video download
 import youtube_dl
-ydl = youtube_dl.YoutubeDL({'outtmpl': './video/%(title)s.%(ext)s'})
+ydl = youtube_dl.YoutubeDL({'format':'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best', 'outtmpl': './video/%(title)s.%(ext)s'})
 
 def setURL (nextPage):
 	sleep(2)
