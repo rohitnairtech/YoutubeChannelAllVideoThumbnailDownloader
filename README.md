@@ -10,3 +10,6 @@
 ## External dependencies- 
 ### youtube-dl - for video download
 ``sudo -H pip install --upgrade youtube-dl``
+
+### to get developer keys from google, visit this link :-
+[developers.google.com](https://developers.google.com/youtube/v3/getting-started)
